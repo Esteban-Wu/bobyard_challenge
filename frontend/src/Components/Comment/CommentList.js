@@ -3,6 +3,8 @@ import axios from 'axios';
 
 const commentsFromJSON = require('./comments.json');
 const CommentList = (props) => {
+    // Sends a post request to the backend to add a new
+    // comment.
     let sendPost = (comment) => {
         const url = 'http://localhost:4000/comments'
         axios.post(url, comment)
@@ -13,6 +15,8 @@ const CommentList = (props) => {
         .catch((error) => console.log(error))
     }
 
+    // Iterates through all the comments provided in
+    // the JSON and sends a post request to the backend.
     let addCommentHandler = () => {
         commentsFromJSON.comments.map((comment) => {
             sendPost(comment);

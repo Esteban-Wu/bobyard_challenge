@@ -16,6 +16,7 @@ class App extends React.Component {
     this.updateComments()
   }
 
+  // Retrieve comment data from backend and update state.
   updateComments = () => {
     const url = 'http://localhost:4000/comments'
     axios.get(url, { crossdomain: true })
