@@ -34,7 +34,7 @@ export const updateComment = (req, res) => {
 }
 
 export const deleteComment = (req, res) => {
-    Comment.deleteOne({ _id: req.params.donationID })
+    Comment.deleteOne({ _id: req.params.commentID })
     .then(() => {
         res.json({ message: "Successfully deleted comment." })
     })

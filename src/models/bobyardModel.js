@@ -1,6 +1,9 @@
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 export const CommentSchema = new Schema({
+  id: {
+    type: String
+  },
   author: {
     type: String,
     required: "Enter author name"
